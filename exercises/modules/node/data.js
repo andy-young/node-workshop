@@ -1,4 +1,4 @@
-modules export App = {
+module.exports = {
   users: [
     {id: 1, name: 'Weezy'}
   ],
