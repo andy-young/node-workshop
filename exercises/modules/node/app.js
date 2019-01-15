@@ -1,7 +1,7 @@
-const api = require('./api')
+window.App = window.App || {}
 
-const showPostsForCurrentUser = (userId, cb) => {
-  api.getPostsForUser(userId, posts => {
+window.App.showPostsForCurrentUser = (userId, cb) => {
+  window.App.getPostsForUser(userId, posts => {
     const postTemplates = posts.map(post => {
       return `
       <div class="post">
@@ -14,20 +14,15 @@ const showPostsForCurrentUser = (userId, cb) => {
   })
 }
 
-const showUserProfile = (userId, cb) => {
-  api.getUserById(userId, user => {
+window.App.showUserProfile = (userId, cb) => {
+  window.App.getUserById(userId, user => {
     const profile = `
       <div>
         ${user.name}
       </div>
     `
-    cb(profile)
+    cb(user)
   })
-}
-
-module.exports = {
-  showPostsForCurrentUser,
-  showUserProfile
 }
 
 
