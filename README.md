@@ -1,5 +1,5 @@
-# Intro to Nodejs
-> Scott Moss & Frontend Masters
+# Nodejs Workshop
+
 - [Resources](#resources)
 - [Course](#course)
 - [Exercises](#exercises)
