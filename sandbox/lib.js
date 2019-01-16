@@ -6,7 +6,8 @@ module.exports = {
   sendLog,
   value: 1,
   userIDs: [1, 2, 3],
-  action(dirname) {
-    console.log(`I live in 'lib.js' and was called from: ${dirname}.`);
+  action(filename) {
+    console.log(`I live in 'lib.js' and was called from: ${filename}.`);
   }
 };
+
