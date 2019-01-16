@@ -8,18 +8,29 @@
 
 // console.log("'Module' gives info of current module:\n", module);
 
-console.log("==================================================================");
-
 // throw new Error('oops');
+console.log(
+  "=================================================================="
+);
 
-const {
-  sendLog,
-  value,
-  userIDs,
-  action
-} = require('./lib');
+const { sendLog, value, userIDs, action } = require("./lib");
+
+const fs = require("fs");
 
 action(__filename);
 sendLog();
-console.log(`I required 'value' (${value}) from 'lib.js'.`);
 
+console.log(`I required 'value' (${value}) from 'lib.js'.\n`);
+
+console.log(
+  "=================================================================="
+);
+
+const getLibFile = fs
+  .readFileSync("./lib.js", { encoding: "utf-8" })
+  .toString();
+
+console.log("The contents of 'lib.js' is: \n\n", getLibFile);
+
+const path = require('path');
+console.log(path);
